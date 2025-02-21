@@ -72,7 +72,7 @@ if st.session_state["openai_api_key"]:
             st.subheader("AI-Generated Reports")
             
             summary_prompt = f"Please make a summary: {st.session_state['report_text']}"
-            patient_friendly_prompt = f"Please make a patient friendly report that is easy to understand and does not use medical jargon without explaining the term: {st.session_state['report_text']}"
+            patient_friendly_prompt = f"Please make a patient friendly report that is easy to understand and does not use medical jargon: {st.session_state['report_text']}"
             recommendation_prompt = f"Please make a recommendation for the next step: {st.session_state['report_text']}"
             
             with st.spinner("Generating Summary..."):
